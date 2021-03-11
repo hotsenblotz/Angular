@@ -4,13 +4,15 @@
             <div>
                 <img [src]='article.imageUrl'>
             </div>
-            <div>
+            
+            <div >
                 <h3>{{article.title}}</h3>
-            </div>
-            <div class="meta-infor">
+                
+                <div class="meta-infor">
                 {{article.date.toDateString()}}
                 <p [innerHTML]='article.description'></p>
-                <a href="#" class="continue-reading">Continue reading</a>
+                <a routerLink="/{{article.tag}}" class="continue-reading">Continue reading</a>
+                </div>
             </div>
 
         </div>
